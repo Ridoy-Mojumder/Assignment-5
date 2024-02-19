@@ -1,0 +1,56 @@
+
+  body {
+    font-family: 'Raleway';font-size: 22px;
+}
+
+
+.bus-seat {
+background-color: rgb(187, 187, 187);
+color: #fff;
+border-radius: 10px;
+padding: 15px;
+color: black;
+text-align: center;
+font-size: 1.5rem;
+width: 60px;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s ease;
+}
+
+/* .bus-seat:hover {
+background-color: #1DD100;
+} */
+
+.dotted-vertical-line {
+    border: none;
+    border-left: 1px dotted white;
+    height: 100px; 
+    margin: 10px 0;
+  }
+.dotted-vertical-line-green {
+    border: none;
+    border-left: 2px dotted #1DD100;
+    height: auto; 
+    margin: 10px 0;
+  }
+
+  .dotted-horizontal-line-green{
+    border: none;
+    border-top: 2px dotted #BBBBBB;
+    height: auto; 
+    margin: 10px 0;
+  }
+  .dotted-horizontal-line{
+    border: none;
+    border-top: 2px dotted #BBBBBB;
+    height: auto; 
+    width: 520px;
+    margin: 10px 0;
+  }
+
+
