@@ -54,7 +54,7 @@
 
                     <div class="flex">
                         <button
-                            class="flex gap-3 p-3 text-[16px] rounded-[8px] border-[1px] border-[#1DD100] text-[#1DD100] bg-[#E8FAE5]">Bus
+                            class="flex gap-3 p-3 text-[16px] rounded-[8px] border-[1px] border-[#1DD100] text-[#1DD100] bg-[#E8FAE5] w-28">Bus
                             <img src="./images/bus-icon.png" alt=""></button>
                     </div>
                 </div>
@@ -79,13 +79,13 @@
                     </div>
                     <div class="flex justify-center gap-10">
                         <button
-                            class="text-xl font-bold rounded-lg bg-[#1DD100] p-4 font-family flex justify-center">Buy
+                            class="text-xl font-bold rounded-lg bg-[#1DD100] p-4 font-family flex justify-center text-white w-36 border-2 border-gray-300">Buy
                             Now</button>
                     </div>
                 </div>
 
                 <!-- for three card -->
-                <div class="flex justify-around absolute -bottom-12 gap-x-1 left-0 w-full mt-40">
+                <div class="flex justify-around absolute -bottom-24 gap-x-1 left-0 w-full mt-40">
                     <!-- for card one -->
                     <div
                         class="flex justify-center items-center h-[150px] bg-white border-b-4 border-[#1DD100] rounded-xl w-[25%] mx-[-15%] gap-8">
@@ -262,7 +262,7 @@
                                 </div>
                                 <div class="flex justify-around gap-3">
                                     <img src="./images/seat-green-filled.png" alt="">
-                                    <p class="text-[16px] text-gray-500">Selected</p>
+                                    <p class="text-[16px] text-gray-500 ">Selected</p>
                                 </div>
                             </div>
 
@@ -392,11 +392,6 @@
 
 
 
-
-
-
-
-
                     <div class="dotted-vertical-line-green"></div>
 
                     <!-- for count sit -->
@@ -407,7 +402,7 @@
 
 
                         <!-- for right site -->
-                        <div class="bg-gray-50 p-8 m-8 rounded-2xl">
+                        <div class="bg-gray-50 p-4 rounded-2xl w-[520px]">
                             <div class="overflow-x-auto">
                                 <table class="table" id="selected-seats-table">
                                     <!-- head -->
@@ -420,7 +415,7 @@
                                             <th class="text-[16px] text-black font-bold">Price</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="selectedSeatsTableBody">
+                                    <tbody >
                                         <!-- Selected seats, class, and ticket price will be added here -->
                                     </tbody>
                                 </table>
@@ -439,13 +434,17 @@
                             </div>
 
                             <!-- for coupon part -->
-                            <div class="pt-6 pb-6">
+                            <div class="p-6">
                                 <div class="flex">
                                     <input type="text" id="couponInput" oninput="checkCoupon()"
                                         placeholder="Have any coupon?">
                                     <button class="btn bg-[#1DD100] p-7 rounded-tl-none rounded-bl-none"
                                         id="applyButton" disabled onclick="applyCoupon()">Apply</button>
                                 </div>
+                            </div>
+
+                            <div class="p-4">
+                                <p class="text-[14px] text-black font-light" id="discountParagraph"></p>
                             </div>
 
                             <div class="flex justify-between px-6">
@@ -455,78 +454,56 @@
                                 </div>
                             </div>
 
+                           
+
                         </div>
 
 
                         <div>
                             <div>
-                                <h1 class="text-1xl text-black font-extrabold pb-3">Passenger Name <span class="text-3xl font-extrabold">*</span></h1>
-                                <input type="text" id="passenger-name" placeholder="Enter your name" class="border-2 border-gray-300 w-full p-3 mb-4 rounded-2xl text-[16px]" oninput="enableNextButton()">
+                                <h1 class="text-1xl text-black font-extrabold pb-3">Passenger Name <span
+                                        class="text-3xl font-extrabold">*</span></h1>
+                                <input type="text" id="passenger-name" placeholder="Enter your name"
+                                    class="border-2 border-gray-300 w-full p-3 mb-4 rounded-2xl text-[16px]"
+                                    oninput="enableNextButton()">
                             </div>
-                        
+
                             <div>
-                                <h1 class="text-1xl text-black font-extrabold pb-3">Phone Number<span class="text-3xl font-extrabold">*</span></h1>
-                                <input type="text" id="phone-number" placeholder="Enter your phone number" class="border-2 border-gray-300 w-full p-3 mb-4 rounded-2xl text-[16px]" oninput="enableNextButton()">
+                                <h1 class="text-1xl text-black font-extrabold pb-3">Phone Number<span
+                                        class="text-3xl font-extrabold">*</span></h1>
+                                <input type="text" id="phone-number" placeholder="Enter your phone number"
+                                    class="border-2 border-gray-300 w-full p-3 mb-4 rounded-2xl text-[16px]"
+                                    oninput="enableNextButton()">
                             </div>
-                        
+
                             <div>
                                 <h1 class="text-1xl text-black font-extrabold pb-3">Email ID</h1>
-                                <input type="text" id="email-id" placeholder="Enter your Email ID" class="border-2 border-gray-300 w-full p-3 mb-4 rounded-2xl text-[16px]" oninput="enableNextButton()">
+                                <input type="text" id="email-id" placeholder="Enter your Email ID"
+                                    class="border-2 border-gray-300 w-full p-3 mb-4 rounded-2xl text-[16px]"
+                                    oninput="enableNextButton()">
                             </div>
-                        
+
                             <div class="pt-4">
-                                <button id="nextButton" class="btn bg-[#1DD100] w-full text-[24px] font-extrabold h-[20px]" disabled onclick="handleNextButtonClick()">Next</button>
+                                <button id="nextButton"
+                                    class="btn bg-[#1DD100] w-full text-[24px] font-extrabold h-[20px]" disabled
+                                    onclick="handleNextButtonClick()">Next</button>
                             </div>
 
 
                             <div>
 
                             </div>
-
-                            <!-- <div>
-                                Open the modal using ID.showModal() method 
-                                
-                                <dialog id="my_modal_2" id="success-message" class="modal hidden">
-                                    <div class="modal-box">
-                                        <div class=" text-green-800 rounded">
-                                            <div class="border-2 border-green-400 text-center p-4">
-                                                <div>
-                                                    <img src="./images/success.png" alt="" class="mx-auto">
-                                                </div>
-                                                <h1 class="text-2xl font-extrabold pt-6">Success</h1>
-                                                <p class="font-bold pt-4">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.</p>
-                                                <p>Shortly you will find a confirmation in your email.</p>
-                                                <div class="pt-6">
-                                                    <button id="continue-button" class="btn bg-[#27AE60] w-[200px] h-[50px]">Continue</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <form method="dialog" class="modal-backdrop">
-                                        <button>Close</button>
-                                    </form>
-                                </dialog>
-                            </div>
-
-                        </div> -->
-
-
 
                             
 
-                            <!-- Additional existing HTML content -->
-
-
-
-
                             <div class="m-4 flex justify-around">
                                 <div>
-                                    <a href="">Terms and Conditions</a>
-                                    <hr class="border-gray-400">
+                                    <p class="text-[16px] text-black font-bold">Terms and Conditions</p>
+                                    <hr class="border-gray-400 border-2">
                                 </div>
                                 <div>
-                                    <a href="">Cancellation Policy</a>
-                                    <hr class="border-gray-400">
+                                    <p class="text-[16px] text-black font-bold">Cancellation Policy</p>
+                                    <hr class="border-gray-400 border-2">
                                 </div>
                             </div>
 
@@ -542,51 +519,52 @@
 
 
 
-    
 
 
 
 
-    <!-- footer part -->
 
-    <footer>
-        <div class="bg-[#030712] text-white p-16 mt-12">
-            <div class="flex pb-10">
-                <div>
-                    <h1 class=" text-4xl font-extrabold font-family pb-5">P-Ticket</h1>
-                    <p class="lg:w-[907px]  text-[16px] font-medium">P-Ticket is a digital platform to make your daily
-                        commuting better.</p>
+        <!-- footer part -->
+
+        <footer>
+            <div class="bg-[#030712] text-white p-16 mt-12">
+                <div class="flex pb-10">
+                    <div>
+                        <h1 class=" text-4xl font-extrabold font-family pb-5">P-Ticket</h1>
+                        <p class="lg:w-[907px]  text-[16px] font-medium">P-Ticket is a digital platform to make your
+                            daily
+                            commuting better.</p>
+                    </div>
+
+                    <div>
+                        <h1 class="text-1xl font-extrabold pb-4">Download our app</h1>
+                        <div class="">
+                            <button class="btn bg-[#030712] text-white h-[80px] p-5">
+                                <img src="./images/playstore.png" alt="">
+                                <div>
+                                    <p>Get it on</p>
+                                    <h1 class="text1xl">GooglePlay</h1>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <h1 class="text-1xl font-extrabold pb-4">Download our app</h1>
-                    <div class="">
-                        <button class="btn bg-[#030712] text-white h-auto p-5">
-                            <img src="./images/playstore.png" alt="">
-                            <div>
-                                <p>Get it on</p>
-                                <h1 class="text1xl">GooglePlay</h1>
-                            </div>
-                        </button>
+                <div class="dotted-horizontal-line-green pt-5"></div>
+
+                <div class="flex justify-between text-[16px]">
+                    <div>
+                        <p>@all rights reserved, P-Ticket services limited.2024</p>
+                    </div>
+                    <div class="flex justify-around gap-8">
+                        <p>Terms & condition</p>
+                        <p>Return & refund policy</p>
+                        <p>Privacy policy</p>
                     </div>
                 </div>
             </div>
 
-            <div class="dotted-horizontal-line-green pt-5"></div>
-
-            <div class="flex justify-between text-[16px]">
-                <div>
-                    <p>@all rights reserved, P-Ticket services limited.2024</p>
-                </div>
-                <div class="flex justify-around gap-8">
-                    <p>Terms & condition</p>
-                    <p>Return & refund policy</p>
-                    <p>Privacy policy</p>
-                </div>
-            </div>
-        </div>
-
-    </footer>
+        </footer>
 
 
     </div>

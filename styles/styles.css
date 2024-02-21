@@ -53,8 +53,8 @@ background-color: #1DD100;
     margin: 10px 0;
   }
   .selected {
-    background-color: #1DD100; /* Set the desired background color for selected seats */
-    color: #ffffff; /* Set the text color for selected seats */
+    background-color: #1DD100; 
+    color: #ffffff; 
 }
 
 
