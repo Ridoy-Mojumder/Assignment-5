@@ -7,6 +7,9 @@ function handleSeatSelection(seatNumber) {
     const numberOfSitCount = document.getElementById('number-of-sit');
     const totalPriceElement = document.getElementById('total-price');
     const selectedSeatsTable = document.getElementById('selected-seats-table');
+    console.log(seatButton.innerText);
+
+    console.log(numberOfSitCount.innerText);
 
     if (!seatButton.classList.contains('selected') && parseInt(selectSitCount.innerText) < 4) {
             
@@ -102,56 +105,42 @@ function enableNextButton() {
 
     if (selectSitCount > 0 && (nameInput.value || phoneNumberInput.value || emailInput.value)) {
         nextButton.removeAttribute('disabled');
-    } else {
-        nextButton.setAttribute('disabled', 'disabled');
-    }
+    } 
 }
 
  
 function handleNextButtonClick() {
-    const successMessage = document.getElementById('successMessage');
-    successMessage.classList.remove('hidden');
+    document.getElementById('successMessage').classList.remove('hidden');
 
-    const fullBody=document.getElementById('body');
-    fullBody.classList.add('hidden')
+    document.getElementById('body').classList.add('hidden')
 }
 
  
 function continueBooking() {
-    const fullBody=document.getElementById('body');
-    fullBody.classList.remove('hidden')
+    document.getElementById('body').classList.remove('hidden')
     resetPage();
     
 }
 
 
-function resetPage() {
-     
-    const selectedSeats = document.querySelectorAll('.selected');
-    selectedSeats.forEach(seat => seat.classList.remove('selected'));
-
-     
+function resetPage() {   
     document.getElementById('select-sit').innerText = '0';
-    document.getElementById('number-of-sit').innerText = '4';
-    document.getElementById('selected-seats-table').innerHTML = '';
+    document.getElementById('number-of-sit').innerText = '40';
+    document.getElementById('selected-seats-table').innerText = '';
 
      
     totalPrice = 0;
     document.getElementById('total-price').innerText = '0';
 
      
-    const couponInput = document.getElementById('couponInput');
-    const applyButton = document.getElementById('applyButton');
-    couponInput.value = '';
-    applyButton.disabled = true;
+    document.getElementById('couponInput').value = '';;
+    document.getElementById('applyButton').disabled = true;
 
      
-    const successMessage = document.getElementById('successMessage');
-    successMessage.classList.add('hidden');
+    document.getElementById('successMessage').classList.add('hidden');
 
      
-    const nextButton = document.getElementById('nextButton');
-    nextButton.setAttribute('disabled', 'disabled');
+    document.getElementById('nextButton').setAttribute('disabled', 'disabled');
 }
 
 
